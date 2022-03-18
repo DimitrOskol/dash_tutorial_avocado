@@ -19,13 +19,14 @@ external_stylesheets = [
 ]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+#server = app.server
 app.title = 'Avocado Analytics: Understand Your Avocados!'
 
 app.layout = html.Div(
 	children=[
 		html.Div(
 			children=[
-				html.P(children='🥑', className='header-emoji'),
+				html.P(children='AVOCADO', className='header-emoji'),
 				html.H1(
 					children='Avocado Analytics', className='header-title'
 				),
@@ -166,70 +167,6 @@ def update_charts(region, avocado_type, start_date, end_date):
 	}
 	return price_chart_figure, volume_chart_figure
 
-		# html.Div(
-		# 	children=[
-		# 		html.Div(
-		# 			children=dcc.Graph(
-		# 				id='price-chart',
-		# 				config={'displayModeBar': False},
-		# 				figure={
-		# 					'data': [
-		# 						{
-		# 							'x': data['Date'],
-		# 							'y': data['AveragePrice'],
-		# 							'type': 'lines',
-		# 							'hovertemplate': 	'$%{y:.2f}'
-		# 												'<extra></exrta>',
-		# 						},
-		# 					],
-		# 					'layout': {
-		# 						'title': {
-		# 							'text': 'Average Price of Avocados',
-		# 							'x': 0.05,
-		# 							'xanchor': 'left',
-		# 						},
-		# 						'xaxis': {'fixedrange': True},
-		# 						'yaxis': {
-		# 							'tickprefix': '$',
-		# 							'fixedrange': True,
-		# 						},
-		# 						'colorway': ['#17B897'],
-		# 					},
-		# 				},
-		# 			),
-		# 			className='card',
-		# 		),
-		# 		html.Div(
-		# 			children=dcc.Graph(
-		# 				id='volume-chart',
-		# 				config={'displayModeBar': False},
-		# 				figure={
-		# 					'data': [
-		# 						{
-		# 							'x': data['Date'],
-		# 							'y': data['Total Volume'],
-		# 							'type': 'lines',
-		# 						},
-		# 					],
-		# 					'layout': {
-		# 						'title': {
-		# 							'text': 'Avocados Sold',
-		# 							'x': 0.05,
-		# 							'xanchor': 'left',
-		# 						},
-		# 						'xaxis': {'fixedrange': True},
-		# 						'yaxis': {'fixedrange': True},
-		# 						'colorway': ['#12D39'],
-		# 					},
-		# 				},
-		# 			),
-		# 			className='card',
-		# 		),
-		# 	],
-		# 	className='wrapper',
-		# ),
-# 	]
-# )
 
 if __name__ == '__main__':
 	app.run_server(debug=True, host = '127.0.0.1')
