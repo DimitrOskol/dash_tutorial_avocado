@@ -2,3 +2,4 @@ venv
 *.pyc
 .ipynb_checkpoints
 *.ipynb
+ubuntu_dash_avocado.pem
