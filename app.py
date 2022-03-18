@@ -26,11 +26,7 @@ app.layout = html.Div(
 	children=[
 		html.Div(
 			children=[
-<<<<<<< HEAD
 				html.P(children='AVOCADO', className='header-emoji'),
-=======
-				html.P(children='AVOCADOS', className='header-emoji'),
->>>>>>> 50db2ad871f1f77d5ef6474d30fee40fa66c3814
 				html.H1(
 					children='Avocado Analytics', className='header-title'
 				),
